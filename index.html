@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>puja</title>
+  <title>Friend</title>
   <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap" rel="stylesheet">
   <style>
     * {
@@ -181,10 +181,13 @@
 <body>
 
 <div class="container">
-  <h1>Will You Be My Girlfriend, 💖 Sruti?</h1>
-  <p>I really like you... more than just a friend, but I couldn't keep it inside anymore. You make my days brighter and my heart happier. Would you make me the happiest guy ever and be my girlfriend? 💌</p>
+  <h1>Will You Be My Best Friend, 🥰 Sruti?</h1>
+  <p>
+    A best friend is someone who makes your laughter a little louder, your problems a little smaller, and your life a lot brighter. Will you be that special friend in my life? 🌟<br>
+    I want someone with whom I can share my problems, happiness, and everything in life.
+  </p>
   <button class="btn yes-btn" onclick="celebrate()">
-    YES 🥰 <span class="heart">💖</span>
+    YES 😊 <span class="heart">🤗</span>
   </button>
   <button class="btn no-btn" id="noBtn" onmouseover="moveButton()" onclick="sadFace()">NO 🙈</button>
 </div>
@@ -194,18 +197,24 @@
 <div class="overlay-message" id="overlayMsg">
   <div id="dateInvite" style="display:none;">
     <div style="font-size:2.2em; margin-bottom:20px;">
-      💖 Yay! Thank you for saying YES! 💖<br>
+      🥰 Yay! Thank you for saying YES! 🥰<br>
       <span style="font-size:1.2em;">You just made my world brighter! 🌈</span><br>
-      <span style="font-size:1.5em; color:#ffb6e6; display:inline-block; margin-top:15px; text-shadow:0 0 10px #ff4081;">I love you! 💖</span>
+      <span style="font-size:1.5em; color:#ffb6e6; display:inline-block; margin-top:15px; text-shadow:0 0 10px #ff4081;">
+        I'm so grateful to have you as my best friend! 🤗
+      </span>
     </div>
     <div style="font-size:1.5em; margin-bottom:30px;">
-      Would you like to go on a magical date with me? 🌹✨
+      Would you like to have a heart-to-heart talk and share everything with each other? 💬✨
     </div>
-    <button id="goDateBtn" style="padding:15px 40px; font-size:1.2em; background:#ff4081; color:#fff; border:none; border-radius:15px; box-shadow:0 0 20px #ff4081; cursor:pointer; transition:background 0.3s;">
-      Let's Go! 💑
-    </button>
+    <a id="goDateBtn"
+       href="https://wa.me/919999999999?text=I%20said%20YES!%20Let's%20be%20best%20friends%20and%20share%20everything%20together%20🤗"
+       target="_blank"
+       onclick="this.style.display='none'; document.getElementById('finalMsg').style.display='block';"
+       style="display:inline-block; padding:15px 40px; font-size:1.2em; background:#ff4081; color:#fff; border:none; border-radius:15px; box-shadow:0 0 20px #ff4081; cursor:pointer; transition:background 0.3s; text-decoration:none;">
+      Let's Share! 💬
+    </a>
     <div id="finalMsg" style="display:none; margin-top:40px; font-size:1.3em;">
-      Can’t wait to see you!<br>Get ready for the best date ever! 🥰🌟
+      Can’t wait to talk to you!<br>Thank you for being my best friend! 🥰🌟
     </div>
     <div id="heartRain"></div>
   </div>
@@ -261,17 +270,6 @@
     }, 1200);
   }
 
-  // Go for a date button logic
-  document.addEventListener('DOMContentLoaded', function() {
-    const goDateBtn = document.getElementById('goDateBtn');
-    if (goDateBtn) {
-      goDateBtn.onclick = function() {
-        goDateBtn.style.display = 'none';
-        document.getElementById('finalMsg').style.display = 'block';
-      };
-    }
-  });
-
   // Playful sad face and shake animation
   function sadFace() {
     const btn = document.getElementById('noBtn');
@@ -292,11 +290,10 @@
     // Keep button inside the container
     const x = Math.random() * (rect.width - btnWidth);
     const y = Math.random() * (rect.height - btnHeight);
-    btn.style.position = "absolute";
+    btn.style.position = "absolute"; 
     btn.style.left = `${x}px`;
     btn.style.top = `${y}px`;
   }
 </script>
 
 </body>
-</html>
